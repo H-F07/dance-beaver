@@ -11,7 +11,7 @@ body {
 .dancer {
   width: 250px;
   height: 250px;
-  background-image: url('Beaver.gif'); /* Vérifie bien la majuscule ici ! */
+  background-image: url('beaver.gif'); /* Vérifie bien la majuscule ici ! */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
