@@ -1,17 +1,17 @@
 body {
-  background-color: #E0BBE4; /* Ton violet pastel */
+  background-color: #FFDE21; 
   margin: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Pour éviter les barres de défilement */
+  overflow: hidden; 
 }
 
 .dancer {
   width: 250px;
   height: 250px;
-  background-image: url('beaver.gif'); /* Vérifie bien la majuscule ici ! */
+  background-image: url('beaver.gif');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
