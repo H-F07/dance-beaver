@@ -1,20 +1,57 @@
+/* Style global pour tout le site */
 body {
-  background-color: #90D5FF; 
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; 
+    background-color: #ffd000; /* Ton fond jaune d'origine */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Pour que le castor ne sorte pas de l'écran */
+    flex-direction: column; /* Pour empiler le titre au-dessus du castor */
 }
 
+/* --- TON NOUVEAU STYLE POUR LE TITRE --- */
+.pixel-title {
+    /* Choisi une police système qui fait un peu rétro (ou télécharge une police pixel plus tard) */
+    font-family: "Courier New", Courier, monospace;
+    font-size: 3rem;
+    color: #ff00ff; /* Un beau magenta flashy pour le rétro */
+    text-transform: uppercase; /* Tout en majuscules pour le style arcade */
+    text-shadow: 
+        0 0 0.2rem #fff,
+        0 0 0.5rem #fff,
+        0 0 1rem #ff00ff,
+        0 0 1.5rem #ff00ff; /* Effet de lueur "néon" pixel */
+    margin-bottom: 2rem; /* Espace entre le titre et le castor */
+    letter-spacing: 0.1rem; /* Espace entre les lettres pour faire pixel */
+    
+    /* Animation de clignotement "Start Game" */
+    animation: blink-caret .75s step-end infinite;
+}
+
+/* Définition de l'animation de clignotement */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { color: #fff; } /* Change de couleur au milieu */
+}
+/* --------------------------------------- */
+
+/* Style pour ton castor d'origine */
 .dancer {
-  width: 250px;
-  height: 250px;
-  background-image: url('beaver.gif');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
+    width: 200px; /* Adapte la taille si besoin */
+    height: 200px;
+    background-image: url("beaver.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /* Ton animation d'origine, on n'y touche pas */
+    animation: dance 1s steps(4) infinite; 
 }
 
+/* Ta Keyframe d'origine pour l'animation */
+@keyframes dance {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
